@@ -1,0 +1,369 @@
+.contactContainer {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  position: fixed;
+}
+
+.mailBtn {
+  text-decoration: none;
+  transform: translateX(-100vw);
+  animation: mailBtnAnimation 2s forwards;
+}
+
+.mailBtn > button {
+  text-decoration: none;
+  font: 200 2vmax "Roboto";
+  cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
+  padding: 2vmax;
+}
+
+@keyframes mailBtnAnimation {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.contact-banner {
+  background-image: url("../../../images/contact.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.contact-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); */
+}
+
+.contact-banner h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.contact-banner p {
+  font-size: 1.6rem;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.contact-intro {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.contact-intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom right, #f8f9fa 49%, #ffffff 51%);
+}
+
+.contact-intro h2 {
+  font-size: 3rem;
+  color: #1e1e6a;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.contact-intro h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #007bff, #00bfff);
+  border-radius: 2px;
+}
+
+.contact-description {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  padding: 0 2rem;
+}
+
+.contact-description p {
+  color: #555;
+  line-height: 2;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.contact-main {
+  padding: 6rem 2rem;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.contact-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom right, #ffffff 49%, #f8f9fa 51%);
+}
+
+.contact-container {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  color: #1e1e6a;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.info-item h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.info-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-form {
+  flex: 1;
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 2rem;
+  color: #1e1e6a;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #007bff, #00bfff);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-banner h1 {
+    font-size: 3.5rem;
+  }
+
+  .contact-banner p {
+    font-size: 1.4rem;
+  }
+
+  .contact-intro h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-banner {
+    height: 50vh;
+  }
+
+  .contact-banner h1 {
+    font-size: 2.8rem;
+  }
+
+  .contact-banner p {
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+  }
+
+  .contact-intro {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-description p {
+    font-size: 1.1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-banner p {
+    font-size: 1rem;
+  }
+
+  .contact-intro {
+    padding: 3rem 1rem;
+  }
+
+  .contact-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-description p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .contact-main {
+    padding: 3rem 1rem;
+  }
+
+  .contact-info h3,
+  .contact-form h3 {
+    font-size: 1.8rem;
+  }
+
+  .info-item i {
+    font-size: 1.2rem;
+  }
+
+  .info-item h4 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .contact-banner {
+    background-image: url("../../../images/contactmobile.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+  }
+  /* .email66 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  } */
+}
+/* @media screen and (max-width: 340px) {
+
+  .email66 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+} */
+@media screen and (max-width: 450px) {
+  #contact-email {
+    font-size: 0.85rem; /* smaller size for small screens */
+  }
+}

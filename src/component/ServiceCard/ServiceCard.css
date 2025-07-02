@@ -1,0 +1,65 @@
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.serviceCard > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.serviceCard > h4 {
+  margin: 1vmax 0.5vmax;
+  color: #1e1e6a;
+}
+
+.serviceCard > p {
+  margin: 0.5vmax;
+  color: #666;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+
+.servicePrice {
+  margin: 0.5vmax !important;
+  color: #1e1e6a !important;
+  font-weight: bold !important;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+  transform: translateY(-1vmax);
+}
+
+@media screen and (max-width: 600px) {
+  .serviceCard > img {
+    height: 200px;
+  }
+
+  .serviceCard > h4 {
+    font-size: 1.5vmax;
+  }
+
+  .serviceCard > p {
+    font-size: 1.2vmax;
+  }
+
+  .servicePrice {
+    font-size: 1.3vmax !important;
+  }
+}   

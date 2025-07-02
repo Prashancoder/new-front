@@ -1,0 +1,115 @@
+.contactListContainer {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.contactListContainer h1 {
+  font-size: 2.5rem;
+  color: #1e1e6a;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contactList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contactCard {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+}
+
+.contactHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.contactHeader h3 {
+  font-size: 1.4rem;
+  color: #1e1e6a;
+  font-weight: 600;
+}
+
+.contactHeader span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.contactInfo {
+  margin-bottom: 1.5rem;
+}
+
+.contactInfo p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.contactInfo p strong {
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.contactMessage {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.contactMessage p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.contactMessage p:last-child {
+  color: #555;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .contactListContainer {
+    padding: 1.5rem;
+  }
+
+  .contactListContainer h1 {
+    font-size: 2rem;
+  }
+
+  .contactList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactListContainer {
+    padding: 1rem;
+  }
+
+  .contactListContainer h1 {
+    font-size: 1.8rem;
+  }
+
+  .contactCard {
+    padding: 1.5rem;
+  }
+
+  .contactHeader h3 {
+    font-size: 1.2rem;
+  }
+} 

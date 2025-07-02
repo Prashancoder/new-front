@@ -1,0 +1,248 @@
+.services {
+  padding: 2vmax;
+  min-height: 100vh;
+  background-color: rgb(235, 235, 235);
+}
+
+.servicesHeading {
+  text-align: center;
+  font-size: 1.6vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 2vmax;
+  margin: 5vmax auto;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.servicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.serviceCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+}
+
+.serviceCard > img {
+  width: 14vmax;
+  height: 10vmax;
+  object-fit: cover;
+}
+
+.serviceCard__info {
+  padding: 1vmax;
+}
+
+.serviceCard__name {
+  font-size: 1.2vmax;
+  margin-bottom: 0.5vmax;
+}
+
+.serviceCard__price {
+  font-size: 1vmax;
+  margin-bottom: 0.5vmax;
+  color: tomato;
+}
+
+.serviceCard__btn {
+  background-color: tomato;
+  color: white;
+  padding: 0.5vmax;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9vmax;
+  transition: all 0.5s;
+}
+
+.serviceCard__btn:hover {
+  background-color: rgb(179, 66, 46);
+}
+
+@media screen and (max-width: 600px) {
+  .serviceCard {
+    width: 20vmax;
+  }
+
+  .serviceCard > img {
+    width: 20vmax;
+    height: 15vmax;
+  }
+
+  .serviceCard__name {
+    font-size: 1.7vmax;
+  }
+
+  .serviceCard__price {
+    font-size: 1.5vmax;
+  }
+
+  .serviceCard__btn {
+    font-size: 1.5vmax;
+  }
+}
+
+.services-banner {
+  background-image: url("../../images/cover.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.services-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.services-banner h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.services-banner p {
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.services-intro {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.services-intro h2 {
+  font-size: 2.5rem;
+  color: #1e1e6a;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.services-intro h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.services-description {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.services-description p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.services-showcase {
+  padding: 5rem 2rem;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.services-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom right, #ffffff 49%, #f8f9fa 51%);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .services-banner {
+    height: 50vh;
+  }
+
+  .services-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-banner p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .services-intro h2 {
+    font-size: 2rem;
+  }
+
+  .services-description p {
+    font-size: 1rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services-banner h1 {
+    font-size: 2rem;
+  }
+
+  .services-banner p {
+    font-size: 1rem;
+  }
+
+  .services-intro {
+    padding: 3rem 1rem;
+  }
+
+  .services-showcase {
+    padding: 3rem 1rem;
+  }
+} 
